@@ -22,4 +22,4 @@ DATA_ARCHIVE_ROOT = "/tmp/tutorial"
 LOG_FOLDER = "/tmp/tutorial/logs"
 DIFF_PATH = "/Users/annatswater/Desktop/Whatever"
 RELEASE_PATH = "/Users/annatswater/Desktop/Whatever"
-EVENT
+EVENT = "whatever"
