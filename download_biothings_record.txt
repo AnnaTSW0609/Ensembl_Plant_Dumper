@@ -1,0 +1,474 @@
+Last login: Sun Jul  1 08:58:45 on console
+Annas-MacBook-Air:~ annatswater$ python /Users/annatswater/Desktop/setup.py install
+Traceback (most recent call last):
+  File "/Users/annatswater/Desktop/setup.py", line 15, in <module>
+    version = __import__('biothings').get_version()
+ImportError: No module named biothings
+Annas-MacBook-Air:~ annatswater$ sudo easy_install pip
+Password:
+Searching for pip
+Best match: pip 9.0.1
+Processing pip-9.0.1-py2.7.egg
+pip 9.0.1 is already the active version in easy-install.pth
+Installing pip script to /usr/local/bin
+Installing pip2.7 script to /usr/local/bin
+Installing pip2 script to /usr/local/bin
+
+Using /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg
+Processing dependencies for pip
+Finished processing dependencies for pip
+Annas-MacBook-Air:~ annatswater$ pip install biothings
+Collecting biothings
+  Downloading https://files.pythonhosted.org/packages/f4/7d/ee76a0fe12a09d841789e2669bc1c1ec8a819f058303d537ca6f12473272/biothings-0.1.0.tar.gz (157kB)
+    100% |████████████████████████████████| 163kB 3.0MB/s 
+    Complete output from command python setup.py egg_info:
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "/private/var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/pip-build-bVBcud/biothings/setup.py", line 14, in <module>
+        version = __import__('biothings').get_version()
+      File "biothings/__init__.py", line 1, in <module>
+        import sys, os, asyncio
+    ImportError: No module named asyncio
+    
+    ----------------------------------------
+Command "python setup.py egg_info" failed with error code 1 in /private/var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/pip-build-bVBcud/biothings/
+You are using pip version 9.0.1, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Annas-MacBook-Air:~ annatswater$ pip install --upgrade pip
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/0f/74/ecd13431bcc456ed390b44c8a6e917c1820365cbebcb6a8974d1cd045ab4/pip-10.0.1-py2.py3-none-any.whl (1.3MB)
+    100% |████████████████████████████████| 1.3MB 814kB/s 
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+Exception:
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/commands/install.py", line 342, in run
+    prefix=options.prefix_path,
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/req/req_set.py", line 778, in install
+    requirement.uninstall(auto_confirm=True)
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/req/req_install.py", line 754, in uninstall
+    paths_to_remove.remove(auto_confirm)
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/req/req_uninstall.py", line 115, in remove
+    renames(path, new_path)
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/utils/__init__.py", line 267, in renames
+    shutil.move(old, new)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 300, in move
+    rmtree(src)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 247, in rmtree
+    rmtree(fullname, ignore_errors, onerror)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 252, in rmtree
+    onerror(os.remove, fullname, sys.exc_info())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 250, in rmtree
+    os.remove(fullname)
+OSError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/EGG-INFO/PKG-INFO'
+You are using pip version 9.0.1, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Annas-MacBook-Air:~ annatswater$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1603k  100 1603k    0     0  4002k      0 --:--:-- --:--:-- --:--:-- 4019k
+Annas-MacBook-Air:~ annatswater$ python get-pip.py
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/0f/74/ecd13431bcc456ed390b44c8a6e917c1820365cbebcb6a8974d1cd045ab4/pip-10.0.1-py2.py3-none-any.whl
+Collecting wheel
+  Downloading https://files.pythonhosted.org/packages/81/30/e935244ca6165187ae8be876b6316ae201b71485538ffac1d718843025a9/wheel-0.31.1-py2.py3-none-any.whl (41kB)
+    100% |████████████████████████████████| 51kB 3.3MB/s 
+matplotlib 1.3.1 requires nose, which is not installed.
+matplotlib 1.3.1 requires tornado, which is not installed.
+Installing collected packages: pip, wheel
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+Could not install packages due to an EnvironmentError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/EGG-INFO/PKG-INFO'
+Consider using the `--user` option or check the permissions.
+
+You are using pip version 9.0.1, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Annas-MacBook-Air:~ annatswater$ pip install --upgrade
+You must give at least one requirement to install (see "pip help install")
+You are using pip version 9.0.1, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Annas-MacBook-Air:~ annatswater$ pip install --upgrade pip
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/0f/74/ecd13431bcc456ed390b44c8a6e917c1820365cbebcb6a8974d1cd045ab4/pip-10.0.1-py2.py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 9.0.1
+    Uninstalling pip-9.0.1:
+Exception:
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/commands/install.py", line 342, in run
+    prefix=options.prefix_path,
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/req/req_set.py", line 778, in install
+    requirement.uninstall(auto_confirm=True)
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/req/req_install.py", line 754, in uninstall
+    paths_to_remove.remove(auto_confirm)
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/req/req_uninstall.py", line 115, in remove
+    renames(path, new_path)
+  File "/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/utils/__init__.py", line 267, in renames
+    shutil.move(old, new)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 300, in move
+    rmtree(src)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 247, in rmtree
+    rmtree(fullname, ignore_errors, onerror)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 252, in rmtree
+    onerror(os.remove, fullname, sys.exc_info())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py", line 250, in rmtree
+    os.remove(fullname)
+OSError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/EGG-INFO/PKG-INFO'
+You are using pip version 9.0.1, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Annas-MacBook-Air:~ annatswater$ $ pip install --upgrade git+https://github.com/pypa/pip
+-bash: $: command not found
+Annas-MacBook-Air:~ annatswater$ pip install --upgrade https://github.com/pypa/pip
+Collecting https://github.com/pypa/pip
+  Downloading https://github.com/pypa/pip
+     | 153kB 484kB/s
+  Cannot unpack file /private/var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/pip-7lrLR4-unpack/pip (downloaded from /private/var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/pip-OYkaFv-build, content-type: text/html; charset=utf-8); cannot detect archive format
+Cannot determine archive format of /private/var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/pip-OYkaFv-build
+You are using pip version 9.0.1, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Annas-MacBook-Air:~ annatswater$ pip install git+https://github.com/biothings/biothings.api.git#egg=biothings
+Collecting biothings from git+https://github.com/biothings/biothings.api.git#egg=biothings
+  Cloning https://github.com/biothings/biothings.api.git to /private/var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/pip-build-Iqg9hc/biothings
+    Complete output from command python setup.py egg_info:
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "/private/var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/pip-build-Iqg9hc/biothings/setup.py", line 15, in <module>
+        version = __import__('biothings').get_version()
+      File "biothings/__init__.py", line 1, in <module>
+        import sys, os, asyncio
+    ImportError: No module named asyncio
+    
+    ----------------------------------------
+Command "python setup.py egg_info" failed with error code 1 in /private/var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/pip-build-Iqg9hc/biothings/
+You are using pip version 9.0.1, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Annas-MacBook-Air:~ annatswater$ python /Users/annatswater/Desktop/setup.py install
+Traceback (most recent call last):
+  File "/Users/annatswater/Desktop/setup.py", line 15, in <module>
+    version = __import__('biothings').get_version()
+ImportError: No module named biothings
+Annas-MacBook-Air:~ annatswater$ python /Users/annatswater/Desktop/biothings.api-master/setup.py install
+Traceback (most recent call last):
+  File "/Users/annatswater/Desktop/biothings.api-master/setup.py", line 15, in <module>
+    version = __import__('biothings').get_version()
+  File "/Users/annatswater/Desktop/biothings.api-master/biothings/__init__.py", line 1, in <module>
+    import sys, os, asyncio
+ImportError: No module named asyncio
+Annas-MacBook-Air:~ annatswater$ python version
+python: can't open file 'version': [Errno 2] No such file or directory
+Annas-MacBook-Air:~ annatswater$ python -v
+# installing zipimport hook
+import zipimport # builtin
+# installed zipimport hook
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site.py
+import site # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/os.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/os.py
+import os # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/os.pyc
+import errno # builtin
+import posix # builtin
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/posixpath.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/posixpath.py
+import posixpath # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/posixpath.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/stat.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/stat.py
+import stat # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/stat.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/genericpath.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/genericpath.py
+import genericpath # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/genericpath.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/warnings.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/warnings.py
+import warnings # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/warnings.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/linecache.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/linecache.py
+import linecache # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/linecache.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/types.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/types.py
+import types # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/types.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/UserDict.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/UserDict.py
+import UserDict # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/UserDict.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_abcoll.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_abcoll.py
+import _abcoll # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_abcoll.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/abc.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/abc.py
+import abc # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/abc.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_weakrefset.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_weakrefset.py
+import _weakrefset # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_weakrefset.pyc
+import _weakref # builtin
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy_reg.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy_reg.py
+import copy_reg # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/copy_reg.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/traceback.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/traceback.py
+import traceback # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/traceback.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sysconfig.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sysconfig.py
+import sysconfig # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sysconfig.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/re.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/re.py
+import re # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/re.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_compile.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_compile.py
+import sre_compile # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_compile.pyc
+import _sre # builtin
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_parse.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_parse.py
+import sre_parse # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_parse.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_constants.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_constants.py
+import sre_constants # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/sre_constants.pyc
+dlopen("/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/_locale.so", 2);
+import _locale # dynamically loaded from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/_locale.so
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_sysconfigdata.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_sysconfigdata.py
+import _sysconfigdata # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_sysconfigdata.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_osx_support.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_osx_support.py
+import _osx_support # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/_osx_support.pyc
+# zipimport: found 7 names in /Users/annatswater/Library/Python/2.7/lib/python/site-packages/dis3-0.1.2-py2.7.egg
+# zipimport: found 41 names in /Users/annatswater/Library/Python/2.7/lib/python/site-packages/macholib-1.9-py2.7.egg
+# zipimport: found 16 names in /Users/annatswater/Library/Python/2.7/lib/python/site-packages/pefile-2017.11.5-py2.7.egg
+# zipimport: found 19 names in /Users/annatswater/Library/Python/2.7/lib/python/site-packages/altgraph-0.15-py2.7.egg
+import encodings # directory /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/__init__.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/__init__.py
+import encodings # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/__init__.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/codecs.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/codecs.py
+import codecs # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/codecs.pyc
+import _codecs # builtin
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/aliases.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/aliases.py
+import encodings.aliases # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/aliases.pyc
+# /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/utf_8.pyc matches /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/utf_8.py
+import encodings.utf_8 # precompiled from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/encodings/utf_8.pyc
+Python 2.7.10 (default, Oct  6 2017, 22:29:07) 
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.31)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+dlopen("/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/readline.so", 2);
+import readline # dynamically loaded from /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload/readline.so
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>>  
+... 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> exit()
+# clear __builtin__._
+# clear sys.path
+# clear sys.argv
+# clear sys.ps1
+# clear sys.ps2
+# clear sys.exitfunc
+# clear sys.exc_type
+# clear sys.exc_value
+# clear sys.exc_traceback
+# clear sys.last_type
+# clear sys.last_value
+# clear sys.last_traceback
+# clear sys.path_hooks
+# clear sys.path_importer_cache
+# clear sys.meta_path
+# clear sys.flags
+# clear sys.float_info
+# restore sys.stdin
+# restore sys.stdout
+# restore sys.stderr
+# cleanup __main__
+# cleanup[1] encodings
+# cleanup[1] site
+# cleanup[1] sysconfig
+# cleanup[1] abc
+# cleanup[1] _weakrefset
+# cleanup[1] sre_constants
+# cleanup[1] _codecs
+# cleanup[1] _warnings
+# cleanup[1] zipimport
+# cleanup[1] _sysconfigdata
+# cleanup[1] encodings.utf_8
+# cleanup[1] _osx_support
+# cleanup[1] codecs
+# cleanup[1] readline
+# cleanup[1] signal
+# cleanup[1] traceback
+# cleanup[1] posix
+# cleanup[1] encodings.aliases
+# cleanup[1] exceptions
+# cleanup[1] _weakref
+# cleanup[1] re
+# cleanup[1] _locale
+# cleanup[1] sre_compile
+# cleanup[1] _sre
+# cleanup[1] sre_parse
+# cleanup[2] copy_reg
+# cleanup[2] posixpath
+# cleanup[2] errno
+# cleanup[2] _abcoll
+# cleanup[2] types
+# cleanup[2] genericpath
+# cleanup[2] stat
+# cleanup[2] warnings
+# cleanup[2] UserDict
+# cleanup[2] os.path
+# cleanup[2] linecache
+# cleanup[2] os
+# cleanup sys
+# cleanup __builtin__
+# cleanup ints: 488 unfreed ints
+# cleanup floats
+Annas-MacBook-Air:~ annatswater$ python
+Python 2.7.10 (default, Oct  6 2017, 22:29:07) 
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.31)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+Annas-MacBook-Air:~ annatswater$ python3 /Users/annatswater/Desktop/biothings.api-master/setup.py install
+fatal: Not a git repository (or any of the parent directories): .git
+fatal: Not a git repository (or any of the parent directories): .git
+running install
+running bdist_egg
+running egg_info
+creating biothings.egg-info
+writing biothings.egg-info/PKG-INFO
+writing dependency_links to biothings.egg-info/dependency_links.txt
+writing requirements to biothings.egg-info/requires.txt
+writing top-level names to biothings.egg-info/top_level.txt
+writing manifest file 'biothings.egg-info/SOURCES.txt'
+warning: manifest_maker: standard file 'setup.py' not found
+
+reading manifest file 'biothings.egg-info/SOURCES.txt'
+writing manifest file 'biothings.egg-info/SOURCES.txt'
+installing library code to build/bdist.macosx-10.6-intel/egg
+running install_lib
+warning: install_lib: 'build/lib' does not exist -- no Python modules to install
+
+creating build/bdist.macosx-10.6-intel
+creating build/bdist.macosx-10.6-intel/egg
+creating build/bdist.macosx-10.6-intel/egg/EGG-INFO
+copying biothings.egg-info/PKG-INFO -> build/bdist.macosx-10.6-intel/egg/EGG-INFO
+copying biothings.egg-info/SOURCES.txt -> build/bdist.macosx-10.6-intel/egg/EGG-INFO
+copying biothings.egg-info/dependency_links.txt -> build/bdist.macosx-10.6-intel/egg/EGG-INFO
+copying biothings.egg-info/requires.txt -> build/bdist.macosx-10.6-intel/egg/EGG-INFO
+copying biothings.egg-info/top_level.txt -> build/bdist.macosx-10.6-intel/egg/EGG-INFO
+zip_safe flag not set; analyzing archive contents...
+creating 'dist/biothings-0.1.0-py3.6.egg' and adding 'build/bdist.macosx-10.6-intel/egg' to it
+removing 'build/bdist.macosx-10.6-intel/egg' (and everything under it)
+Processing biothings-0.1.0-py3.6.egg
+Copying biothings-0.1.0-py3.6.egg to /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+Adding biothings 0.1.0 to easy-install.pth file
+
+Installed /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/biothings-0.1.0-py3.6.egg
+Processing dependencies for biothings==0.1.0
+Searching for elasticsearch>=6.1.1
+Reading https://pypi.python.org/simple/elasticsearch/
+Downloading https://files.pythonhosted.org/packages/14/0f/08c478e6e9ae12e6e85b40953371bfbc98d523c0d0b8133ed501dfc9568f/elasticsearch-6.3.0.tar.gz#sha256=80ff7a1a56920535a9987da333c7e385b2ded27595b6de33860707dab758efbe
+Best match: elasticsearch 6.3.0
+Processing elasticsearch-6.3.0.tar.gz
+Writing /var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/easy_install-w9uzmwcp/elasticsearch-6.3.0/setup.cfg
+Running elasticsearch-6.3.0/setup.py -q bdist_egg --dist-dir /var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/easy_install-w9uzmwcp/elasticsearch-6.3.0/egg-dist-tmp-d3k87gz6
+warning: no files found matching 'elasticsearch/connection/esthrift/Rest-remote'
+no previously-included directories found matching 'docs/_build'
+no previously-included directories found matching 'test_elasticsearch'
+warning: no previously-included files matching '__pycache__' found under directory '*'
+warning: no previously-included files matching '*.py[co]' found under directory '*'
+zip_safe flag not set; analyzing archive contents...
+Copying elasticsearch-6.3.0-py3.6.egg to /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+Adding elasticsearch 6.3.0 to easy-install.pth file
+
+Installed /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/elasticsearch-6.3.0-py3.6.egg
+Searching for tornado==4.5.3
+Reading https://pypi.python.org/simple/tornado/
+Downloading https://files.pythonhosted.org/packages/e3/7b/e29ab3d51c8df66922fea216e2bddfcb6430fb29620e5165b16a216e0d3c/tornado-4.5.3.tar.gz#sha256=6d14e47eab0e15799cf3cdcc86b0b98279da68522caace2bd7ce644287685f0a
+Best match: tornado 4.5.3
+Processing tornado-4.5.3.tar.gz
+Writing /var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/easy_install-ejhi2f9v/tornado-4.5.3/setup.cfg
+Running tornado-4.5.3/setup.py -q bdist_egg --dist-dir /var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/easy_install-ejhi2f9v/tornado-4.5.3/egg-dist-tmp-0bwnoc45
+no previously-included directories found matching 'docs/build'
+warning: no files found matching 'tornado/test/README'
+zip_safe flag not set; analyzing archive contents...
+tornado.test.__pycache__.iostream_test.cpython-36: module references __file__
+tornado.test.__pycache__.template_test.cpython-36: module references __file__
+tornado.test.__pycache__.web_test.cpython-36: module references __file__
+tornado.test.__pycache__.options_test.cpython-36: module references __file__
+tornado.test.__pycache__.httpserver_test.cpython-36: module references __file__
+tornado.test.__pycache__.locale_test.cpython-36: module references __file__
+tornado.__pycache__.testing.cpython-36: module references __file__
+tornado.__pycache__.autoreload.cpython-36: module references __file__
+tornado.__pycache__.speedups.cpython-36: module references __file__
+tornado.__pycache__.options.cpython-36: module references __file__
+creating /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado-4.5.3-py3.6-macosx-10.6-intel.egg
+Extracting tornado-4.5.3-py3.6-macosx-10.6-intel.egg to /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+Adding tornado 4.5.3 to easy-install.pth file
+
+Installed /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tornado-4.5.3-py3.6-macosx-10.6-intel.egg
+Searching for requests==2.8.1
+Reading https://pypi.python.org/simple/requests/
+Downloading https://files.pythonhosted.org/packages/38/2d/290d33417c079a5248fcd06b0b8492acdd1851e54e4bdad54c3859dab600/requests-2.8.1.tar.gz#sha256=84fe8d5bf4dcdcc49002446c47a146d17ac10facf00d9086659064ac43b6c25b
+Best match: requests 2.8.1
+Processing requests-2.8.1.tar.gz
+Writing /var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/easy_install-bro84f10/requests-2.8.1/setup.cfg
+Running requests-2.8.1/setup.py -q bdist_egg --dist-dir /var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/easy_install-bro84f10/requests-2.8.1/egg-dist-tmp-kzfbs5lx
+creating /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests-2.8.1-py3.6.egg
+Extracting requests-2.8.1-py3.6.egg to /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+Adding requests 2.8.1 to easy-install.pth file
+
+Installed /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/requests-2.8.1-py3.6.egg
+Searching for urllib3>=1.21.1
+Reading https://pypi.python.org/simple/urllib3/
+Downloading https://files.pythonhosted.org/packages/3c/d2/dc5471622bd200db1cd9319e02e71bc655e9ea27b8e0ce65fc69de0dac15/urllib3-1.23.tar.gz#sha256=a68ac5e15e76e7e5dd2b8f94007233e01effe3e50e8daddf69acfd81cb686baf
+Best match: urllib3 1.23
+Processing urllib3-1.23.tar.gz
+Writing /var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/easy_install-1gu0tl_i/urllib3-1.23/setup.cfg
+Running urllib3-1.23/setup.py -q bdist_egg --dist-dir /var/folders/rk/c7zyvlss17x4d87zpx5x33c40000gn/T/easy_install-1gu0tl_i/urllib3-1.23/egg-dist-tmp-593ph_xu
+warning: no previously-included files matching '*' found under directory 'docs/_build'
+zip_safe flag not set; analyzing archive contents...
+urllib3.packages.__pycache__.six.cpython-36: module references __path__
+creating /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3-1.23-py3.6.egg
+Extracting urllib3-1.23-py3.6.egg to /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+Adding urllib3 1.23 to easy-install.pth file
+
+Installed /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/urllib3-1.23-py3.6.egg
+Finished processing dependencies for biothings==0.1.0
+Annas-MacBook-Air:~ annatswater$ python 3
+python: can't open file '3': [Errno 2] No such file or directory
+Annas-MacBook-Air:~ annatswater$ python3
+Python 3.6.1 (v3.6.1:69c0db5050, Mar 21 2017, 01:21:04) 
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import biothings
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'biothings'
+>>> exit()
+Annas-MacBook-Air:~ annatswater$ su -c echo 'http.enabled: True' >> /etc/elasticsearch/elasticsearch.yml
+-bash: /etc/elasticsearch/elasticsearch.yml: No such file or directory
+Annas-MacBook-Air:~ annatswater$ docker pull docker.elastic.co/elasticsearch/elasticsearch:6.3.0
+6.3.0: Pulling from elasticsearch/elasticsearch
+7dc0dca2b151: Pull complete 
+a50481268b4a: Pull complete 
+ee5228de771f: Pull complete 
+da55b983e8eb: Pull complete 
+f2b07ded3946: Pull complete 
+667f672695bc: Pull complete 
+243fca89bf48: Pull complete 
+Digest: sha256:3169b4009903c47245d3bf81d8a7b11ab22ce2965598823384e5c4bbd4298316
+Status: Downloaded newer image for docker.elastic.co/elasticsearch/elasticsearch:6.3.0
+Annas-MacBook-Air:~ annatswater$ docker pull docker.elastic.co/elasticsearch/elasticsearch-oss:6.3.0
+6.3.0: Pulling from elasticsearch/elasticsearch-oss
+7dc0dca2b151: Already exists 
+a50481268b4a: Already exists 
+ee5228de771f: Already exists 
+da55b983e8eb: Already exists 
+143eb5dd5e49: Pull complete 
+29d8a2d8ea47: Pull complete 
+be99c5384de1: Pull complete 
+Digest: sha256:0e0d73cb8bdce88c25adb9426aecabf89db4235d44ea29402f5f28b813f23d2e
+Status: Downloaded newer image for docker.elastic.co/elasticsearch/elasticsearch-oss:6.3.0
+Annas-MacBook-Air:~ annatswater$ python3
+Python 3.6.1 (v3.6.1:69c0db5050, Mar 21 2017, 01:21:04) 
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import biothings
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'biothings'
+>>> exit()
+Annas-MacBook-Air:~ annatswater$ su -c echo 'http.enabled: True' >> /etc/elasticsearch/elasticsearch.yml
+-bash: /etc/elasticsearch/elasticsearch.yml: No such file or directory
+Annas-MacBook-Air:~ annatswater$ 
