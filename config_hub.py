@@ -8,6 +8,7 @@ DATA_SRC_MASTER_COLLECTION = 'src_master'             # for metadata of each src
 DATA_SRC_DUMP_COLLECTION = 'src_dump'                 # for src data download information
 DATA_SRC_BUILD_COLLECTION = 'src_build'               # for src data build information
 DATA_SRC_BUILD_CONFIG_COLLECTION = 'src_build_config' # for src data build configuration
+EVENT_COLLECTION = "event"
 
 DATA_TARGET_MASTER_COLLECTION = 'db_master'
 

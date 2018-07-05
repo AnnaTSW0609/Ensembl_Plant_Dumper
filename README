@@ -1,0 +1,32 @@
+assuming you're in this directory, Ensembl_Plant_Dumper
+
+- go to parent dir:
+
+cd ..
+
+- clone biothings.api
+
+git clone https://github.com/biothings/biothings.api.git
+
+(never modify any files in this repo, you shouldn't have to)
+
+- install biothings.api dependencies, using pip:
+
+pip install -r requirements.txt
+
+(if some are missing, it's possible, report it to me, don't try to install
+it in your repo, like you did with "asyncio", "asyncssh", etc...)
+
+- go back to your app folder
+
+cd Ensembl_Plant_Dumper
+
+- create a symlink so your app have access to biothings.api (see the chapter about imports in python)
+
+ln -s ../biothings.api/biothings biothings
+
+- run your script
+
+python Plant_Dumper_first_draft.py
+
+(you shouldn't have any error. It won't do much though, because the actual dump code is not active, you miss some code, we'll see that later!)
