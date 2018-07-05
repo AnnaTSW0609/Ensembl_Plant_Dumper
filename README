@@ -12,6 +12,7 @@ git clone https://github.com/biothings/biothings.api.git
 
 - install biothings.api dependencies, using pip:
 
+cd biothings.api
 pip install -r requirements.txt
 
 (if some are missing, it's possible, report it to me, don't try to install
@@ -19,6 +20,7 @@ it in your repo, like you did with "asyncio", "asyncssh", etc...)
 
 - go back to your app folder
 
+cd ..
 cd Ensembl_Plant_Dumper
 
 - create a symlink so your app have access to biothings.api (see the chapter about imports in python)
